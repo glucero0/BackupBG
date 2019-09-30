@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<ListView
+		android:id="@+id/listBackups"
+		android:layout_alignParentTop="true"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"/>
+
+	<Button
+		android:layout_below="@id/listBackups"
+		android:id="@+id/btnSave"
+		android:onClick="restoreSave"
+		android:layout_height="wrap_content"
+		android:text="Restore"
+		android:layout_width="match_parent"/>
+
+	<TextView
+		android:id="@+id/helpText"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_below="@id/btnSave"/>
+
+</RelativeLayout>
+

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center"
+	android:orientation="vertical">
+	
+	<TextView
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:text="Select Saves to Back Up"
+		android:layout_width="match_parent"/>
+
+	<Spinner
+		android:id="@+id/gameDropList"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:layout_gravity="top"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:text="Base Destination "
+		android:layout_width="match_parent"/>
+	
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:id="@+id/btnReset"
+		android:onClick="resetDestination"
+		android:text="Reset BaseDestination" />
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:layout_width="match_parent"
+		android:textStyle="italic"
+		android:textSize="20sp"
+		android:id="@+id/txtDestPath"
+		android:layout_gravity="right"
+		android:textAlignment="viewEnd"
+		android:paddingStart="60dp"/>
+
+	<TextView
+		android:inputType="textMultiLine|textNoSuggestions"
+		android:autoLink="none"
+		android:autoText="false"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:layout_width="match_parent"
+		android:id="@+id/txtStatus"
+		android:textAlignment="center"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:layout_height="wrap_content"
+			android:text="Back Up"
+			android:layout_width="wrap_content"
+			android:id="@+id/btnBackup"
+			android:onClick="backupFolder"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:text="Restore"
+			android:layout_width="wrap_content"
+			android:id="@+id/btnRestore"
+			android:onClick="restoreBackup"/>
+
+	</LinearLayout>
+
+	<Switch
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:id="@+id/swtchTimeStamp"
+		android:onClick="toggleTimeStamp"
+		android:text="Destination Folder Includes Time Stamp"/>
+
+	<TextView
+		android:inputType="textMultiLine|textNoSuggestions"
+		android:autoLink="none"
+		android:autoText="false"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:layout_width="match_parent"
+		android:id="@+id/txtHelp"/>
+
+</LinearLayout>
+
